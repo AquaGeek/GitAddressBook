@@ -45,7 +45,38 @@
         NSLog(@"  Inserted: %@", insertedRecords ?: @"0");
         NSLog(@"  Updated: %@", updatedRecords ?: @"0");
         NSLog(@"  Deleted: %@", deletedRecords ?: @"0");
+        
+        // Grab all the new and updated records and re-export them as vCards
+        for (NSString *identifier in [insertedRecords ?: @[] arrayByAddingObjectsFromArray:updatedRecords])
+        {
+            // We only care about person records
+            if (![[_addressBook recordClassFromUniqueId:identifier] isEqualToString:NSStringFromClass([ABPerson class])])
+            {
+                continue;
+            }
+            
+            ABPerson *person = (ABPerson *)[_addressBook recordForUniqueId:identifier];
+            [self exportPerson:person];
+        }
+        
+        // TODO: Grab all the deleted records and remove them
     }
+}
+
+- (void)exportPerson:(ABPerson *)person
+{
+    NSData *vCardData = [person vCardRepresentation];
+    
+    // TODO: Figure out a way to use more human-friendly file names
+    NSString *fileName = [person.uniqueId stringByReplacingOccurrencesOfString:@":ABPerson" withString:@""];
+    NSString *filePath = [[self repositoryPath] stringByAppendingFormat:@"%@.vcard", fileName];
+    [vCardData writeToFile:filePath atomically:YES];
+}
+
+- (NSString *)repositoryPath
+{
+    NSString *publicFolderPath = [NSSearchPathForDirectoriesInDomains(NSSharedPublicDirectory, NSUserDomainMask, YES) lastObject];
+    return [publicFolderPath stringByAppendingPathComponent:@"test"];
 }
 
 @end
