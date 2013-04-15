@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E5FC4E8171C4F8B0078E165 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5FC4E7171C4F8B0078E165 /* Cocoa.framework */; };
+		8E5FC506171C4F8C0078E165 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5FC505171C4F8C0078E165 /* SenTestingKit.framework */; };
+		8E5FC507171C4F8C0078E165 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5FC4E7171C4F8B0078E165 /* Cocoa.framework */; };
+		8E5FC50F171C4F8C0078E165 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E5FC50D171C4F8C0078E165 /* InfoPlist.strings */; };
+		8E5FC512171C4F8C0078E165 /* GitAddressBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5FC511171C4F8C0078E165 /* GitAddressBookTests.m */; };
+		8E5FC51C171C4F920078E165 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5FC51B171C4F920078E165 /* AddressBook.framework */; };
+		8E5FC520171C4FEE0078E165 /* L42AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5FC51F171C4FEE0078E165 /* L42AppDelegate.m */; };
+		8E5FC528171C500F0078E165 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8E5FC522171C500F0078E165 /* Credits.rtf */; };
+		8E5FC529171C500F0078E165 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E5FC524171C500F0078E165 /* InfoPlist.strings */; };
+		8E5FC52A171C500F0078E165 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5FC526171C500F0078E165 /* MainMenu.xib */; };
+		8E5FC52B171C50750078E165 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5FC4F3171C4F8B0078E165 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8E5FC508171C4F8C0078E165 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E5FC4DC171C4F8B0078E165 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E5FC4E3171C4F8B0078E165;
+			remoteInfo = GitAddressBook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8E5FC4E4171C4F8B0078E165 /* GitAddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitAddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E5FC4E7171C4F8B0078E165 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		8E5FC4EA171C4F8B0078E165 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		8E5FC4EB171C4F8B0078E165 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8E5FC4EC171C4F8B0078E165 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8E5FC4EF171C4F8B0078E165 /* GitAddressBook-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GitAddressBook-Info.plist"; sourceTree = "<group>"; };
+		8E5FC4F3171C4F8B0078E165 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8E5FC4F5171C4F8B0078E165 /* GitAddressBook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitAddressBook-Prefix.pch"; sourceTree = "<group>"; };
+		8E5FC504171C4F8C0078E165 /* GitAddressBookTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitAddressBookTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E5FC505171C4F8C0078E165 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		8E5FC50C171C4F8C0078E165 /* GitAddressBookTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GitAddressBookTests-Info.plist"; sourceTree = "<group>"; };
+		8E5FC50E171C4F8C0078E165 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8E5FC510171C4F8C0078E165 /* GitAddressBookTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitAddressBookTests.h; sourceTree = "<group>"; };
+		8E5FC511171C4F8C0078E165 /* GitAddressBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitAddressBookTests.m; sourceTree = "<group>"; };
+		8E5FC51B171C4F920078E165 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		8E5FC51E171C4FEE0078E165 /* L42AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = L42AppDelegate.h; sourceTree = "<group>"; };
+		8E5FC51F171C4FEE0078E165 /* L42AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = L42AppDelegate.m; sourceTree = "<group>"; };
+		8E5FC523171C500F0078E165 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		8E5FC525171C500F0078E165 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8E5FC527171C500F0078E165 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E5FC4E1171C4F8B0078E165 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E5FC51C171C4F920078E165 /* AddressBook.framework in Frameworks */,
+				8E5FC4E8171C4F8B0078E165 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E5FC500171C4F8C0078E165 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E5FC506171C4F8C0078E165 /* SenTestingKit.framework in Frameworks */,
+				8E5FC507171C4F8C0078E165 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8E5FC4DB171C4F8B0078E165 = {
+			isa = PBXGroup;
+			children = (
+				8E5FC4ED171C4F8B0078E165 /* GitAddressBook */,
+				8E5FC50A171C4F8C0078E165 /* GitAddressBookTests */,
+				8E5FC4E6171C4F8B0078E165 /* Frameworks */,
+				8E5FC4E5171C4F8B0078E165 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8E5FC4E5171C4F8B0078E165 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E5FC4E4171C4F8B0078E165 /* GitAddressBook.app */,
+				8E5FC504171C4F8C0078E165 /* GitAddressBookTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E5FC4E6171C4F8B0078E165 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E5FC51B171C4F920078E165 /* AddressBook.framework */,
+				8E5FC4E7171C4F8B0078E165 /* Cocoa.framework */,
+				8E5FC505171C4F8C0078E165 /* SenTestingKit.framework */,
+				8E5FC4E9171C4F8B0078E165 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E5FC4E9171C4F8B0078E165 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E5FC4EA171C4F8B0078E165 /* AppKit.framework */,
+				8E5FC4EB171C4F8B0078E165 /* CoreData.framework */,
+				8E5FC4EC171C4F8B0078E165 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		8E5FC4ED171C4F8B0078E165 /* GitAddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				8E5FC51D171C4FEE0078E165 /* Classes */,
+				8E5FC521171C500F0078E165 /* Resources */,
+				8E5FC4EE171C4F8B0078E165 /* Supporting Files */,
+			);
+			name = GitAddressBook;
+			sourceTree = "<group>";
+		};
+		8E5FC4EE171C4F8B0078E165 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E5FC4EF171C4F8B0078E165 /* GitAddressBook-Info.plist */,
+				8E5FC4F3171C4F8B0078E165 /* main.m */,
+				8E5FC4F5171C4F8B0078E165 /* GitAddressBook-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E5FC50A171C4F8C0078E165 /* GitAddressBookTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E5FC510171C4F8C0078E165 /* GitAddressBookTests.h */,
+				8E5FC511171C4F8C0078E165 /* GitAddressBookTests.m */,
+				8E5FC50B171C4F8C0078E165 /* Supporting Files */,
+			);
+			name = GitAddressBookTests;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		8E5FC50B171C4F8C0078E165 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E5FC50C171C4F8C0078E165 /* GitAddressBookTests-Info.plist */,
+				8E5FC50D171C4F8C0078E165 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E5FC51D171C4FEE0078E165 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8E5FC51E171C4FEE0078E165 /* L42AppDelegate.h */,
+				8E5FC51F171C4FEE0078E165 /* L42AppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		8E5FC521171C500F0078E165 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E5FC522171C500F0078E165 /* Credits.rtf */,
+				8E5FC524171C500F0078E165 /* InfoPlist.strings */,
+				8E5FC526171C500F0078E165 /* MainMenu.xib */,
+			);
+			path = Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E5FC4E3171C4F8B0078E165 /* GitAddressBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E5FC515171C4F8C0078E165 /* Build configuration list for PBXNativeTarget "GitAddressBook" */;
+			buildPhases = (
+				8E5FC4E0171C4F8B0078E165 /* Sources */,
+				8E5FC4E1171C4F8B0078E165 /* Frameworks */,
+				8E5FC4E2171C4F8B0078E165 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GitAddressBook;
+			productName = GitAddressBook;
+			productReference = 8E5FC4E4171C4F8B0078E165 /* GitAddressBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8E5FC503171C4F8C0078E165 /* GitAddressBookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E5FC518171C4F8C0078E165 /* Build configuration list for PBXNativeTarget "GitAddressBookTests" */;
+			buildPhases = (
+				8E5FC4FF171C4F8C0078E165 /* Sources */,
+				8E5FC500171C4F8C0078E165 /* Frameworks */,
+				8E5FC501171C4F8C0078E165 /* Resources */,
+				8E5FC502171C4F8C0078E165 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E5FC509171C4F8C0078E165 /* PBXTargetDependency */,
+			);
+			name = GitAddressBookTests;
+			productName = GitAddressBookTests;
+			productReference = 8E5FC504171C4F8C0078E165 /* GitAddressBookTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E5FC4DC171C4F8B0078E165 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = L42;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Lab 42 Development";
+			};
+			buildConfigurationList = 8E5FC4DF171C4F8B0078E165 /* Build configuration list for PBXProject "GitAddressBook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8E5FC4DB171C4F8B0078E165;
+			productRefGroup = 8E5FC4E5171C4F8B0078E165 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E5FC4E3171C4F8B0078E165 /* GitAddressBook */,
+				8E5FC503171C4F8C0078E165 /* GitAddressBookTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E5FC4E2171C4F8B0078E165 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E5FC528171C500F0078E165 /* Credits.rtf in Resources */,
+				8E5FC529171C500F0078E165 /* InfoPlist.strings in Resources */,
+				8E5FC52A171C500F0078E165 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E5FC501171C4F8C0078E165 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E5FC50F171C4F8C0078E165 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8E5FC502171C4F8C0078E165 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E5FC4E0171C4F8B0078E165 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E5FC520171C4FEE0078E165 /* L42AppDelegate.m in Sources */,
+				8E5FC52B171C50750078E165 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E5FC4FF171C4F8C0078E165 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E5FC512171C4F8C0078E165 /* GitAddressBookTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8E5FC509171C4F8C0078E165 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E5FC4E3171C4F8B0078E165 /* GitAddressBook */;
+			targetProxy = 8E5FC508171C4F8C0078E165 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8E5FC50D171C4F8C0078E165 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E5FC50E171C4F8C0078E165 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8E5FC522171C500F0078E165 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E5FC523171C500F0078E165 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		8E5FC524171C500F0078E165 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E5FC525171C500F0078E165 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8E5FC526171C500F0078E165 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E5FC527171C500F0078E165 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E5FC513171C4F8C0078E165 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8E5FC514171C4F8C0078E165 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8E5FC516171C4F8C0078E165 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitAddressBook-Prefix.pch";
+				INFOPLIST_FILE = "GitAddressBook-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8E5FC517171C4F8C0078E165 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitAddressBook-Prefix.pch";
+				INFOPLIST_FILE = "GitAddressBook-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8E5FC519171C4F8C0078E165 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GitAddressBook.app/Contents/MacOS/GitAddressBook";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitAddressBook/GitAddressBook-Prefix.pch";
+				INFOPLIST_FILE = "GitAddressBookTests/GitAddressBookTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		8E5FC51A171C4F8C0078E165 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GitAddressBook.app/Contents/MacOS/GitAddressBook";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitAddressBook/GitAddressBook-Prefix.pch";
+				INFOPLIST_FILE = "GitAddressBookTests/GitAddressBookTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E5FC4DF171C4F8B0078E165 /* Build configuration list for PBXProject "GitAddressBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E5FC513171C4F8C0078E165 /* Debug */,
+				8E5FC514171C4F8C0078E165 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E5FC515171C4F8C0078E165 /* Build configuration list for PBXNativeTarget "GitAddressBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E5FC516171C4F8C0078E165 /* Debug */,
+				8E5FC517171C4F8C0078E165 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E5FC518171C4F8C0078E165 /* Build configuration list for PBXNativeTarget "GitAddressBookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E5FC519171C4F8C0078E165 /* Debug */,
+				8E5FC51A171C4F8C0078E165 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E5FC4DC171C4F8B0078E165 /* Project object */;
+}
