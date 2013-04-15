@@ -20,6 +20,8 @@
     // Listen for changes to the address book
     _addressBook = [ABAddressBook sharedAddressBook];
     
+    [self dumpFullAddressBook];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(addressBookChanged:)
                                                  name:kABDatabaseChangedExternallyNotification
@@ -35,6 +37,9 @@
         notification.userInfo[kABDeletedRecords] == nil)
     {
         NSLog(@"Everything changed.");
+        
+        // Re-export all records
+        [self dumpFullAddressBook];
     }
     else
     {
@@ -59,13 +64,46 @@
             [self exportPerson:person];
         }
         
-        // TODO: Grab all the deleted records and remove them
+        // Grab all the deleted records and remove them
         for (NSString *identifier in deletedRecords)
         {
-            NSLog(@"Deleted: %@", identifier);
-            [self deleteFileWithUniqueID:[identifier stringByReplacingOccurrencesOfString:@":ABPerson" withString:@""]];
+            NSString *fileName = [self fileNameFromUniqueID:identifier];
+            [self deleteFileWithName:fileName];
         }
     }
+}
+
+- (void)dumpFullAddressBook
+{
+    // Keep track of which records are still around
+    NSMutableSet *recordsToDelete = [NSMutableSet set];
+    
+    for (NSString *file in [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[self repositoryPath] error:NULL])
+    {
+        if ([file hasSuffix:@".vcard"])
+        {
+            [recordsToDelete addObject:file];
+        }
+    }
+    
+    // Export all the person records
+    for (ABPerson *person in [_addressBook people])
+    {
+        [self exportPerson:person];
+        [recordsToDelete removeObject:[self fileNameFromUniqueID:person.uniqueId]];
+    }
+    
+    // Delete any removed records
+    for (NSString *fileName in recordsToDelete)
+    {
+        [self deleteFileWithName:fileName];
+    }
+}
+
+- (NSString *)fileNameFromUniqueID:(NSString *)uniqueID
+{
+    return [[uniqueID stringByReplacingOccurrencesOfString:@":ABPerson" withString:@""]
+            stringByAppendingPathExtension:@"vcard"];
 }
 
 - (void)exportPerson:(ABPerson *)person
@@ -73,15 +111,15 @@
     NSData *vCardData = [person vCardRepresentation];
     
     // TODO: Figure out a way to use more human-friendly file names
-    NSString *fileName = [person.uniqueId stringByReplacingOccurrencesOfString:@":ABPerson" withString:@""];
-    NSString *filePath = [[self repositoryPath] stringByAppendingFormat:@"%@.vcard", fileName];
+    NSString *fileName = [self fileNameFromUniqueID:person.uniqueId];
+    NSString *filePath = [[self repositoryPath] stringByAppendingPathComponent:fileName];
     [vCardData writeToFile:filePath atomically:YES];
 }
 
-- (void)deleteFileWithUniqueID:(NSString *)uniqueID
+- (void)deleteFileWithName:(NSString *)fileName
 {
-    NSLog(@"Deleting %@", uniqueID);
-    NSString *filePath = [[self repositoryPath] stringByAppendingFormat:@"%@.vcard", uniqueID];
+    NSLog(@"Deleting %@", fileName);
+    NSString *filePath = [[self repositoryPath] stringByAppendingPathComponent:fileName];
     [[NSFileManager defaultManager] removeItemAtPath:filePath error:NULL];
 }
 
