@@ -60,6 +60,11 @@
         }
         
         // TODO: Grab all the deleted records and remove them
+        for (NSString *identifier in deletedRecords)
+        {
+            NSLog(@"Deleted: %@", identifier);
+            [self deleteFileWithUniqueID:[identifier stringByReplacingOccurrencesOfString:@":ABPerson" withString:@""]];
+        }
     }
 }
 
@@ -71,6 +76,13 @@
     NSString *fileName = [person.uniqueId stringByReplacingOccurrencesOfString:@":ABPerson" withString:@""];
     NSString *filePath = [[self repositoryPath] stringByAppendingFormat:@"%@.vcard", fileName];
     [vCardData writeToFile:filePath atomically:YES];
+}
+
+- (void)deleteFileWithUniqueID:(NSString *)uniqueID
+{
+    NSLog(@"Deleting %@", uniqueID);
+    NSString *filePath = [[self repositoryPath] stringByAppendingFormat:@"%@.vcard", uniqueID];
+    [[NSFileManager defaultManager] removeItemAtPath:filePath error:NULL];
 }
 
 - (NSString *)repositoryPath
