@@ -39,6 +39,7 @@
         NSLog(@"Everything changed.");
         
         // Re-export all records
+        // TODO: There are issues here - [_addressBook people] returns an empty array (causing all records to get deleted)
         [self dumpFullAddressBook];
     }
     else
@@ -67,6 +68,12 @@
         // Grab all the deleted records and remove them
         for (NSString *identifier in deletedRecords)
         {
+            // We only care about person records
+            if (![[_addressBook recordClassFromUniqueId:identifier] isEqualToString:NSStringFromClass([ABPerson class])])
+            {
+                continue;
+            }
+            
             NSString *fileName = [self fileNameFromUniqueID:identifier];
             [self deleteFileWithName:fileName];
         }
@@ -87,6 +94,7 @@
     }
     
     // Export all the person records
+    // TODO: This doesn't seem to be working when AB gets restored
     for (ABPerson *person in [_addressBook people])
     {
         [self exportPerson:person];
